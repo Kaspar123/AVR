@@ -1,2 +1,2 @@
 # AVR
-embedded software etc.
+embedded software etc. (AVR)

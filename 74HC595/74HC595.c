@@ -3,8 +3,10 @@
 
 int main() {
   init();
-  sendByte(0x25);
-  sendByte(0x42);
+  sendSymbol(0);
+  sendSymbol(5);
+  sendSymbol(3);
+  sendSymbol(2);
   return 0;
 }
 
@@ -38,4 +40,8 @@ void sendByte(uint8_t data) {
   }
   PORTB |= (1 << RCLK);
   PORTB &= ~(1 << RCLK);
+}
+
+void sendSymbol(const uint8_t symbol) {
+  sendByte(NUMBERS[symbol]);
 }
